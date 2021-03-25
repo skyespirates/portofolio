@@ -258,67 +258,54 @@ p {
   animation-delay: 2.5s;
 }
 
-/* Services Section */
-#services .service {
+/* Skills Section */
+#skills {
+  display: flex;
   flex-direction: column;
   max-width: 1200px;
   text-align: center;
   margin: 0 auto;
   padding: 100px 0;
 }
-#services .service-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+#skills .logo-container {
+  margin: auto;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 110px 110px 110px;
+  row-gap: 10px;
+  column-gap: 10px;
 }
-#services .service-top {
-  max-width: 500px;
-  margin: 0 auto;
-}
-#services .service-item {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 80%;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 10px 5%;
-  padding: 30px;
-  border-radius: 10px;
-  background-image: url(./img/img-1.png);
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-#services .service-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
+#skills .logo-item {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  opacity: 0.9;
-  z-index: -1;
 }
-#services .service-bottom .icon {
-  height: 80px;
-  width: 80px;
-  margin-bottom: 20px;
+#skills .logo {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  width: 100%;
+  height: 100%;
+  padding: 5px;
 }
-#services .service-item h2 {
-  font-size: 2rem;
-  color: white;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+#skills .logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
 }
-#services .service-item p {
-  color: white;
-  text-align: left;
+#skills .logo img[alt="mongodb"] {
+  height: 100px;
+  width: auto;
+  margin: auto;
 }
-/* End Services Section */
+
+#skills .logo-item h2 {
+  display: none;
+  font-size: 1.5rem;
+  color: black;
+  margin: 10px auto;
+}
+
+/* End Skills Section */
 
 /* Project Section */
 #projects .projects {
@@ -329,6 +316,7 @@ p {
 }
 #projects .projects-header h1 {
   margin-bottom: 50px;
+  text-align: center;
 }
 #projects .projects-list {
   display: flex;
@@ -366,8 +354,34 @@ p {
   font-weight: 500;
   margin-top: 10px;
 }
+#projects .project-info .badge {
+  box-sizing: content-box;
+  background-color: crimson;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 9px;
+}
 #projects .project-info p {
   color: white;
+}
+#projects .project-info .btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#projects .project-info button {
+  font-family: inherit;
+  font-weight: 600;
+  display: inline-block;
+  box-sizing: content-box;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+#projects .project-info button a {
+  text-decoration: none;
+  color: crimson;
 }
 #projects .project-img {
   flex-basis: 50%;
@@ -565,12 +579,49 @@ p {
   }
   /* End Hero */
 
-  /* Service Section */
-  #services .service-bottom .service-item {
-    flex-basis: 45%;
-    margin: 2.5%;
+  /* Skills Section */
+  #skills {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 100px 0;
   }
-  /* End Service */
+  #skills .logo-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #skills .logo {
+    display: inline-flex;
+    width: 90px;
+    height: 100px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 5px;
+  }
+  #skills .logo div {
+    border: 1px solid crimson;
+    width: 90px;
+    height: 100px;
+  }
+
+  #skills .logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #skills .logo-item h2 {
+    font-size: 1.5rem;
+    color: black;
+    margin: 10px auto;
+    display: block;
+  }
+  #skills .logo img[alt="mongodb"] {
+    height: 100%;
+    width: auto;
+  }
+  /* End Skills */
 
   /* Project Section */
   #projects .project-item {
